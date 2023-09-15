@@ -180,7 +180,7 @@
                 "ftpsState": "FtpsOnly",
                 "preWarmedInstanceCount": 1,
                 "functionAppScaleLimit": 0,
-                "functionsRuntimeScaleMonitoringEnabled": true,
+                "functionsRuntimeScaleMonitoringEnabled": false,
                 "minimumElasticInstanceCount": 1,
                 "azureStorageAccounts": {}
             }
