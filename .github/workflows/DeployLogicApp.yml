@@ -1,1 +1,35 @@
+# This is a basic workflow to help you get started with Actions
 
+name: Create a Logic App
+
+# Controls when the action will run. 
+on:
+ workflow_dispatch:
+    inputs:
+      subscriptionId:
+        description: 'SubscriptionId'
+        required: true
+      resourceGroupName:
+        description: 'Resource group name'
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build-and-deploy:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS_LOGICAPPS }}
+      - uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: ${{github.event.inputs.subscriptionId}}
+          resourceGroupName: ${{github.event.inputs.resourceGroupName}}
+          template: ./ARMTemplates/LA_Standard_Basic.json
+          parameters: ./ARMTemplates/LA_Standard_Basic_Param.json
