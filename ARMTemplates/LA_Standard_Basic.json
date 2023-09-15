@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "sites_la_aaa_dev_name": {
-            "defaultValue": "la-aaa-dev",
+            "defaultValue": "la-aaa-prod",
             "type": "String"
         },
         "serverfarms_ASP_TripleapocDEV_89aa_externalid": {
@@ -19,7 +19,7 @@
             "name": "[parameters('sites_la_aaa_dev_name')]",
             "location": "East US",
             "tags": {
-                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-dev20230914169"
+                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-prod20230914169"
             },
             "kind": "functionapp,workflowapp",
             "identity": {
@@ -78,7 +78,7 @@
                 "[resourceId('Microsoft.Web/sites', parameters('sites_la_aaa_dev_name'))]"
             ],
             "tags": {
-                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-dev20230914169"
+                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-prod20230914169"
             },
             "properties": {
                 "allow": true
@@ -93,7 +93,7 @@
                 "[resourceId('Microsoft.Web/sites', parameters('sites_la_aaa_dev_name'))]"
             ],
             "tags": {
-                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-dev20230914169"
+                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-prod20230914169"
             },
             "properties": {
                 "allow": true
@@ -108,7 +108,7 @@
                 "[resourceId('Microsoft.Web/sites', parameters('sites_la_aaa_dev_name'))]"
             ],
             "tags": {
-                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-dev20230914169"
+                "hidden-link: /app-insights-resource-id": "/subscriptions/9eb9892d-4d82-4c17-a21c-f37555c98487/resourceGroups/al4labels-poc/providers/Microsoft.Insights/components/la-aaa-prod20230914169"
             },
             "properties": {
                 "numberOfWorkers": 1,
@@ -129,7 +129,7 @@
                 "acrUseManagedIdentityCreds": false,
                 "logsDirectorySizeLimit": 35,
                 "detailedErrorLoggingEnabled": false,
-                "publishingUsername": "$la-aaa-dev",
+                "publishingUsername": "$la-aaa-prod",
                 "scmType": "None",
                 "use32BitWorkerProcess": false,
                 "webSocketsEnabled": false,
@@ -194,7 +194,7 @@
                 "[resourceId('Microsoft.Web/sites', parameters('sites_la_aaa_dev_name'))]"
             ],
             "properties": {
-                "siteName": "la-aaa-dev",
+                "siteName": "la-aaa-prod",
                 "hostNameType": "Verified"
             }
         }
